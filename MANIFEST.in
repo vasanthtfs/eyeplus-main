@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include eyeplus *.css
+recursive-include eyeplus *.csv
+recursive-include eyeplus *.html
+recursive-include eyeplus *.ico
+recursive-include eyeplus *.js
+recursive-include eyeplus *.json
+recursive-include eyeplus *.md
+recursive-include eyeplus *.png
+recursive-include eyeplus *.py
+recursive-include eyeplus *.svg
+recursive-include eyeplus *.txt
+recursive-exclude eyeplus *.pyc

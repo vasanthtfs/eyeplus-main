@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-21 12:19:40.228076",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "receipt_id",
+  "fetch_serial_no",
+  "print_format",
+  "total_serial_no",
+  "serial_no",
+  "from_no",
+  "to_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "receipt_id",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Receipt ID",
+   "options": "Purchase Receipt"
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Print Format",
+   "options": "Print Format"
+  },
+  {
+   "fetch_from": "receipt_id.naming_series",
+   "fieldname": "serial_no",
+   "fieldtype": "Table",
+   "label": "Serial No",
+   "options": "Serial No Reference Table"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:doc.item_code != null && doc.receipt_id != null",
+   "fieldname": "fetch_serial_no",
+   "fieldtype": "Button",
+   "label": "Fetch Serial No"
+  },
+  {
+   "depends_on": "eval:doc.total_serial_no != null",
+   "fieldname": "total_serial_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Serial No"
+  },
+  {
+   "fieldname": "from_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-21 18:41:20.209199",
+ "modified_by": "Administrator",
+ "module": "Eyeplus",
+ "name": "Label Generator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

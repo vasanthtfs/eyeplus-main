@@ -1,0 +1,23 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-02-05 18:17:18.728196",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Eyeplus",
+ "modified": "2024-02-05 18:17:18.728196",
+ "modified_by": "Administrator",
+ "module": "Eyeplus",
+ "name": "Stock Balance Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Stock Entry",
+ "report_name": "Stock Balance Report",
+ "report_type": "Script Report",
+ "roles": []
+}
